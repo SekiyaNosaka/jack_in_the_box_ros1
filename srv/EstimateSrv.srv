@@ -1,0 +1,5 @@
+---
+# response
+bool result
+int8 pick_id
+geometry_msgs/Pose pick_pose

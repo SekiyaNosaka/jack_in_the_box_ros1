@@ -1,0 +1,5 @@
+<launch>
+    <rosparam file="$(find jack_in_the_box)/param/test_1.yaml" command="load"/>
+    <rosparam file="$(find jack_in_the_box)/param/test_2.yaml" command="load"/>
+    <rosparam file="$(find jack_in_the_box)/param/camera_calibration.yaml" command="load" ns="cam"/>
+</launch>

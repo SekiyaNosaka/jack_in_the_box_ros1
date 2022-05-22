@@ -1,0 +1,17 @@
+tokyo: Tokyo
+osaka: 'Osaka'
+nagoya: "Nagoya"
+
+member:
+  name: xxx
+  id: 999
+
+member_list:
+  - name: aaa
+    id: 1
+  - name: bbb
+    id: 2
+  - name: ccc
+    id: 3
+
+nums_list: [1, 2, 3, 4, 5]

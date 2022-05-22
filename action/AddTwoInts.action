@@ -1,0 +1,9 @@
+# request
+int64 a
+int64 b
+---
+# goal
+int64 sum
+---
+# feedback
+float32 rate

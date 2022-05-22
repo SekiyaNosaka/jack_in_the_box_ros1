@@ -1,0 +1,17 @@
+<?xml version="1.0" ?>
+<launch>
+    <arg name="model" default="$(find jack_in_the_box)/urdf/six_axis_arm_robot.urdf" />
+
+    <param name="robot_description" textfile="$(arg model)" />
+
+    <!-- gazebo world -->
+    <include file="$(find gazebo_ros)/launch/empty_world.launch" />
+
+    <!-- gazebo model -->
+    <node name="spawn_urdf" pkg="gazebo_ros" type="spawn_model"
+        args="-param robot_description -urdf -model six_axis_arm_robot" />
+
+    <rosparam file="$(find jack_in_the_box)/config/controller.yaml" command="load" />
+    <node name="arm_robot_controller_spawner" pkg="controller_manager" type="spawner"
+        respawn="false" output="screen" args="arm_robot_trajectory_controller joint_state_controller" />
+</launch>
